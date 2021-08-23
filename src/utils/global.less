@@ -16,17 +16,16 @@ body {
   margin: 0 auto;
   display: grid;
 
-  @media @S {
-    padding: 0 30px;
-    grid-template-rows: 100px 1fr 100px;
+  @media @mobile {
+    padding: 0 15px;
   }
 
-  @media @M {
+  @media @tablet {
     padding: 0 40px;
     grid-template-rows: 125px 1fr 125px;
   }
 
-  @media @L {
+  @media @desktop {
     padding: 0 100px;
     grid-template-rows: 125px 1fr 125px;
   }
