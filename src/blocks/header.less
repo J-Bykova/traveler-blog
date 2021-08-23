@@ -2,55 +2,54 @@
 @import '../utils/mixins.less';
 
 .header {
-    display: grid;
-    align-items: center;
+  display: grid;
+  align-items: center;
 
-    @media @XL {
-        grid-template-columns: 225px 1fr;
-        padding: 50px 0;
-    }
+  @media @XL {
+    grid-template-columns: 225px 1fr;
+    padding: 50px 0;
+  }
 
 }
 
 .header__logo {
-    display: grid;
-    align-items: center;
+  display: grid;
+  align-items: center;
 }
 
 .header__menu {
-    .reset-list-styles();
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+  .reset-list-styles();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .header__menu-item {
-    @media @XL {
-        margin-left: 35px;
-    }
-}
+  @media @XL {
+    margin-left: 35px;
 
-.header__menu-item:first-of-type {
-    @media @XL {
-        margin-left: 0;
+    &:first-of-type {
+      margin-left: 0;
     }
+  }
 }
 
 .header__menu-item-link {
-    .font(18, 27);
-    font-family: @mainFont;
-    color: @basic-black;
+  .font(18, 27);
+  font-family: @mainFont;
+  color: @basic-black;
 
-    &:hover {
-        opacity: 80%;
-    }
+  &:hover {
+    opacity: 80%;
+  }
 
-    &:active {
-        opacity: 60%;
-    }
+  &:active {
+    opacity: 60%;
+  }
 
-    @media @XL {
-        .font(16, 24);
-        font-weight: 600;
-    }
+  @media @XL {
+    .font(16, 24);
+    font-weight: 600;
+    cursor: pointer;
+  }
 }
