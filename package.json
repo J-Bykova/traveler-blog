@@ -8,13 +8,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "rm -rf ./out; mkdir ./out; lessc src/index.less out/index.css; cp src/index.html out/index.html;",
+    "build": "./build.sh",
     "watch": "npm-watch"
   },
   "watch": {
     "build": {
-      "patterns": ["src"],
-      "extensions": "less"
+      "patterns": [
+        "src"
+      ],
+      "extensions": "less,html"
     }
   },
   "devDependencies": {
