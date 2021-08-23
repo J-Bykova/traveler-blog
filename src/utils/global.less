@@ -1,0 +1,50 @@
+@import '../utils/variables.less';
+@import '../utils/mixins.less';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 100px;
+  display: grid;
+  grid-template-rows: 125px 1fr 125px;
+  max-width: 1600px;
+
+  .font(18, 27);
+  font-family: @mainFont;
+  font-weight: 400;
+  font-style: normal;
+  color: @basic-grey;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 80%;
+}
+
+a:active {
+  opacity: 60%;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  background-color: hsl(232, 24%, 86%);
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Traveler blog",
+  "description": "Личный проект «traveler blog»",
+  "author": {
+    "name": "Evgeniia Bykova",
+    "url": "(https://www.linkedin.com/in/jenny-bykova-307655183/)"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf ./out; mkdir ./out; lessc src/index.less out/index.css; cp src/index.html out/index.html;",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": {
+      "patterns": ["src"],
+      "extensions": "less"
+    }
+  },
+  "devDependencies": {
+    "less": "^4.1.1",
+    "npm-watch": "^0.11.0"
+  }
+}
