@@ -2,36 +2,94 @@
 @import '../utils/mixins.less';
 
 .content {
-    font-family: @mainFont;
-    color: @basic-grey;
+  display: grid;
+  grid-template-columns: 536px 536px 248px;
+  grid-template-rows: 1fr 297px  297px 297px 644px;
+  gap: 50px 40px;
+  grid-template-areas:
+        "h a1 a1"
+        "a2 b2 c2"
+        "a3 b3 c3"
+        "a4 b4 c4"
+        "i i i";
+
+  font-family: @mainFont;
+  color: @basic-grey;
 }
 
-.content__header {}
+.grid1 {
+  grid-area: h;
+}
+
+.grid2 {
+  grid-area: a1;
+}
+
+.grid3 {
+  grid-area: a2;
+}
+
+.grid4 {
+  grid-area: b2;
+}
+
+.grid5 {
+  grid-area: c2;
+}
+
+.grid6 {
+  grid-area: a3;
+}
+
+.grid7 {
+  grid-area: b3;
+}
+
+.grid8 {
+  grid-area: c3;
+}
+
+.grid9 {
+  grid-area: a4;
+}
+
+.grid10 {
+  grid-area: b4;
+}
+
+.grid11 {
+  grid-area: c4;
+}
+
+.grid12 {
+  grid-area: i;
+}
 
 .content__header-title {
-    margin: 0;
-    font-weight: 800;
-    .font(48, 62);
+  margin: 0;
+  font-weight: 800;
+  .font(48, 62);
 }
 
 .content__header-subtitle {
-    margin: 0;
-    font-weight: 600;
-    .font(22, 33);
+  margin: 30px 0 0 0;
+  font-weight: 600;
+  .font(22, 33);
 }
 
-.content__header-text {}
-
-.content__header-img {}
+.content__header-text {
+  margin: 50px 0 0 0;
+  font-weight: 400;
+  .font(18, 27);
+}
 
 .content__text {
-    margin: 0;
-    font-weight: 400;
-    .font(18, 27);
+  margin: 0;
+  font-weight: 400;
+  .font(18, 27);
 }
 
 .content__img {
-    display: block;
-    background-color: @background-img;
+  display: block;
+  background-color: @background-img;
 }
-
