@@ -14,20 +14,9 @@ html {
 
 body {
   margin: 0 auto;
+  padding: 0 100px;
   display: grid;
-
-  @media @mobile {
-    padding: 0 15px;
-  }
-
-  @media @tablet {
-    padding: 0 40px;
-    grid-template-rows: 125px 1fr 125px;
-  }
-
-  @media @desktop {
-    padding: 0 100px;
-  }
+  grid-template-rows: 125px 1fr 125px;
 }
 
 a {
