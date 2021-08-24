@@ -2,6 +2,9 @@
 @import '../utils/mixins.less';
 
 .content {
+  font-family: @mainFont;
+  color: @basic-grey;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 50px 40px;
@@ -13,9 +16,20 @@
         "txt-4 txt-4 txt-5 txt-5 ph-6"
         "ph-7 ph-7 ph-7 ph-7 ph-7";
 
-  font-family: @mainFont;
-  color: @basic-grey;
+  @media @tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 30px;
+    grid-template-areas:
+        "h h ph-1"
+        "ph-2 txt-1 txt-1"
+        "txt-2 txt-2 ph-3"
+        "ph-4 txt-3 txt-3"
+        "txt-4 txt-4 ph-5"
+        "ph-6 txt-5 txt-5"
+        "ph-7 ph-7 ph-7";
+  }
 }
+
 .grid1 {
   grid-area: h;
 }
@@ -78,15 +92,29 @@
   margin: 30px 0 0 0;
   font-weight: 600;
   .font(20, 28);
+
+  @media @tablet {
+    .font(18, 26);
+  }
 }
 
 .content__text {
   margin: 0;
   font-weight: 400;
-  .font(18, 27);
+  .font(18, 26);
+
+  @media @tablet {
+    .font(16, 24);
+  }
 }
 
 .content__img {
   display: block;
+  margin: 0 auto;
   background-color: @background-img;
+
+  @media @tablet {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }

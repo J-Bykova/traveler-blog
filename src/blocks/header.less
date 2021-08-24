@@ -32,11 +32,15 @@
 }
 
 .header__menu-item-link {
-  .font(18, 27);
+  .font(18, 26);
   font-family: @mainFont;
   color: @basic-black;
   font-weight: 600;
   cursor: pointer;
+
+  @media @tablet {
+    .font(16, 24);
+  }
 
   &:hover {
     opacity: 60%;
