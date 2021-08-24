@@ -8,6 +8,11 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+
+  @media @mobile-XL {
+    row-gap: 20px;
+    grid-template-columns: none;
+  }
 }
 
 .header__logo {
@@ -21,6 +26,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+
+  @media @mobile-XL {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 .header__menu-item {
