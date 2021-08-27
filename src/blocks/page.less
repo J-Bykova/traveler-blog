@@ -4,14 +4,21 @@
 .page {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 100px;
+
+  @media @desktop {
+    padding: 0 100px;
+  }
+
+  @media @tablet-XL {
+    padding: 0 100px;
+  }
 
   @media @tablet {
-    padding: 0 24px;
+    padding: 0 50px;
   }
 
   @media @mobile-XL {
-    padding: 0 24px;
+    padding: 0 8px;
   }
 
   @media @mobile {
