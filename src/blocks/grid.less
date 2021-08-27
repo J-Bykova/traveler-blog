@@ -1,0 +1,136 @@
+@import '../utils/variables.less';
+@import '../utils/mixins.less';
+
+.grid {
+  display: grid;
+
+  @media @desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 50px 40px;
+    grid-template-areas:
+        "h h ph-1 ph-1 ph-1"
+        "txt-1 txt-1 ph-1 ph-1 ph-1"
+        "txt-2 txt-2 txt-3 txt-3 ph-2"
+        "ph-3 ph-3 ph-4 ph-4 ph-5"
+        "txt-4 txt-4 txt-5 txt-5 ph-6"
+        "ph-7 ph-7 ph-7 ph-7 ph-7";
+  }
+
+  @media @tablet-XL {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px 30px;
+    grid-template-areas:
+        "h h ph-1 ph-1 ph-1"
+        "txt-1 txt-1 txt-1 txt-1 txt-1"
+        "ph-2 ph-2 ph-2 txt-2 txt-2"
+        "txt-3 txt-3 txt-3 txt-3 txt-3"
+        "ph-3 ph-3 ph-4 ph-4 ph-5"
+        "txt-4 txt-4 ph-6 ph-6 ph-6"
+        "txt-5 txt-5 txt-5 txt-5 txt-5"
+        "ph-7 ph-7 ph-7 ph-7 ph-7";
+  }
+
+  @media @tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 30px;
+    grid-template-areas:
+        "h h h"
+        "ph-1 ph-1 ph-1"
+        "ph-2 txt-1 txt-1"
+        "ph-3 ph-3 ph-3"
+        "txt-2 txt-2 txt-2"
+        "ph-4 ph-4 ph-4"
+        "txt-3 txt-3 txt-3"
+        "ph-5 txt-4 txt-4"
+        "txt-5 txt-5 ph-6 "
+        "ph-7 ph-7 ph-7";
+  }
+
+  @media @mobile-XL {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 15px;
+    grid-template-areas:
+         "h h h"
+         "ph-1 ph-1 ph-1"
+         "ph-2 txt-1 txt-1"
+         "txt-2 txt-2 txt-2"
+         "ph-3 ph-3 ph-3"
+         "txt-3 txt-3 txt-3"
+         "ph-4 ph-4 ph-5"
+         "txt-4 txt-4 txt-4"
+         "ph-6 ph-6 ph-6"
+         "txt-5 txt-5 txt-5"
+         "ph-7 ph-7 ph-7";
+  }
+
+  @media @mobile {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 15px;
+    grid-template-areas:
+            "ph-1 ph-1 ph-1"
+            "h h h"
+            "ph-2 ph-2 ph-2"
+            "txt-1 txt-1 txt-1"
+            "ph-3 ph-3 ph-3"
+            "txt-2 txt-2 txt-2"
+            "ph-4 ph-4 ph-4"
+            "txt-3 txt-3 txt-3"
+            "ph-5 ph-5 ph-5"
+            "txt-4 txt-4 txt-4"
+            "ph-6 ph-6 ph-6"
+            "txt-5 txt-5 txt-5"
+            "ph-7 ph-7 ph-7";
+  }
+}
+
+.grid1 {
+  grid-area: h;
+}
+
+.grid2 {
+  grid-area: txt-1;
+}
+
+.grid3 {
+  grid-area: ph-1;
+}
+
+.grid4 {
+  grid-area: txt-2;
+}
+
+.grid5 {
+  grid-area: txt-3;
+}
+
+.grid6 {
+  grid-area: ph-2;
+}
+
+.grid7 {
+  grid-area: ph-3;
+}
+
+.grid8 {
+  grid-area: ph-4;
+}
+
+.grid9 {
+  grid-area: ph-5;
+}
+
+.grid10 {
+  grid-area: txt-4;
+}
+
+.grid11 {
+  grid-area: txt-5;
+}
+
+.grid12 {
+  grid-area: ph-6;
+}
+
+.grid13 {
+  grid-area: ph-7;
+}
