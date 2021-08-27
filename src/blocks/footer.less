@@ -6,10 +6,21 @@
   grid-template-columns: 225px 1fr;
   align-items: center;
   padding: 50px 0;
+
+  @media @mobile {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+  }
 }
 
 .footer__copyright {
   margin: 0;
   display: flex;
   justify-content: flex-end;
+
+  @media @mobile {
+    justify-content: center;
+    padding: 8px 0;
+  }
 }
