@@ -4,6 +4,7 @@ rm -rf ./out;
 mkdir ./out;
 lessc src/index.less out/bundle.css;
 cp src/index.html out/index.html;
+cp src/menu.js out/menu.js;
 
 # Compressing images
 mkdir ./out/img/

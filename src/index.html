@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="bundle.css">
 </head>
 <body>
-<svg style="display: none">
-    <symbol id="logo" viewBox="0 0 225 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="logo" viewBox="0 0 225 18" fill="none">
         <path d="M0 0.346154H13.6097V3.60989H8.6151V17.6538H4.96822V3.60989H0V0.346154Z" fill="#131313"/>
         <path d="M30.2596 17.6538H26.322L22.5959 11.6456H19.8211V17.6538H16.1742V0.346154H23.5736C25.2826 0.346154 26.736 0.906593 27.9341 2.02747C29.1321 3.14835 29.7311 4.5 29.7311 6.08242C29.7311 7.15385 29.4051 8.1511 28.7533 9.07418C28.1014 9.98077 27.2381 10.6648 26.1635 11.1264L30.2596 17.6538ZM23.5736 3.53571H19.8211V8.65385H23.5736C24.2607 8.65385 24.8509 8.40659 25.3442 7.91209C25.8375 7.4011 26.0842 6.79121 26.0842 6.08242C26.0842 5.37363 25.8375 4.77198 25.3442 4.27747C24.8509 3.78297 24.2607 3.53571 23.5736 3.53571Z"
               fill="#131313"/>
@@ -39,29 +39,37 @@
     </symbol>
 </svg>
 <div class="page">
-    <header class="header">
-        <a class="header__logo logo" href="#">
-            <svg class="logo__svg" width="225" height="18">
-                <use xlink:href="#logo"></use>
-            </svg>
-        </a>
-        <ul class="header__menu">
-            <li class="header__menu-item">
-                <a class="header__menu-item-link" href="#">О блоге</a>
-            </li>
-            <li class="header__menu-item">
-                <a class="header__menu-item-link" href="#">Страны</a>
-            </li>
-            <li class="header__menu-item">
-                <a class="header__menu-item-link" href="#">Интервью</a>
-            </li>
-            <li class="header__menu-item">
-                <a class="header__menu-item-link" href="#">Лайфхаки</a>
-            </li>
-            <li class="header__menu-item">
-                <a class="header__menu-item-link" href="#">Новости</a>
-            </li>
-        </ul>
+    <header class="header header--on-mobile">
+        <div class="header__body">
+            <a class="header__body-logo logo" href="#">
+                <svg class="logo__svg" width="225" height="18">
+                    <use xlink:href="#logo"></use>
+                </svg>
+            </a>
+            <button class="header__body-burger"
+                    type="button"
+                    aria-label="close/open">
+            </button>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-menu">
+                <li class="header__nav-menu-item">
+                    <a class="header__nav-menu-item-link" href="#">О блоге</a>
+                </li>
+                <li class="header__nav-menu-item">
+                    <a class="header__nav-menu-item-link" href="#">Страны</a>
+                </li>
+                <li class="header__nav-menu-item">
+                    <a class="header__nav-menu-item-link" href="#">Интервью</a>
+                </li>
+                <li class="header__nav-menu-item">
+                    <a class="header__nav-menu-item-link" href="#">Лайфхаки</a>
+                </li>
+                <li class="header__nav-menu-item">
+                    <a class="header__nav-menu-item-link" href="#">Новости</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <article class="content grid">
@@ -118,7 +126,6 @@
                  width="248"
                  height="297"
                  alt="Девушка с молодым человеком, девушка фотографирует">
-
             <img class="content__img grid7"
                  src="img/desktop3-1x.webp"
                  srcset="img/desktop3-1x.webp 1x, img/desktop3-2x.webp 2x"
@@ -137,7 +144,6 @@
                  width="248"
                  height="297"
                  alt="Девушка с молодым человеком пьют чай">
-
             <p class="content__text grid10">
                 Конечно помимо еды и жилья не стоит забывать о безопасности поездки.
                 Мы сделали туристическую страховку, так как сплавлялись по реке.
@@ -167,7 +173,6 @@
                  width="248"
                  height="297"
                  alt="Девушка смотрит и улыбается">
-
             <img class="content__img grid13"
                  src="img/desktop7-1x.webp"
                  srcset="img/desktop7-1x.webp 1x, img/desktop7-2x.webp 2x"
@@ -185,5 +190,6 @@
         <p class="footer__copyright">© 2021 Все права защищены</p>
     </footer>
 </div>
+<script src="menu.js"></script>
 </body>
 </html>

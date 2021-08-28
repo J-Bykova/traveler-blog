@@ -9,20 +9,50 @@
   align-items: center;
   padding: 50px 0;
 
-
   @media @mobile-XL {
     row-gap: 20px;
     grid-template-columns: none;
   }
+
+  @media @mobile {
+    display: block;
+    padding: 30px 8px;
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
 }
 
-.header__logo {
+.header__body {
+  @media @mobile {
+    display: flex;
+    justify-content: space-between;
+    grid-template-rows: none;
+    grid-template-columns: none;
+  }
+}
+
+.header__body-logo {
   display: grid;
   align-items: center;
   justify-content: center;
 }
 
-.header__menu {
+.header__nav {
+  &--close-on-mobile {
+    @media @mobile {
+      display: none;
+    }
+  }
+
+  &--open-on-mobile {
+    @media @mobile {
+      display: block;
+      margin: 25px 0 0 0;
+    }
+  }
+}
+
+.header__nav-menu {
   .reset-list-styles();
   display: flex;
   flex-wrap: wrap;
@@ -34,11 +64,14 @@
   }
 
   @media @mobile {
-    display: none;
+    display: block;
+    justify-content: center;
+    grid-template-columns: none;
+    grid-template-rows: none;
   }
 }
 
-.header__menu-item {
+.header__nav-menu-item {
   margin-left: 35px;
 
   &:first-of-type {
@@ -50,9 +83,15 @@
     text-align: center;
     padding: 0 12px;
   }
+
+  @media @mobile {
+    margin: 0;
+    padding: 8px 0;
+    text-align: center;
+  }
 }
 
-.header__menu-item-link {
+.header__nav-menu-item-link {
   .font(18, 26);
   font-family: @mainFont;
   color: @basic-black;
@@ -65,6 +104,36 @@
 
   &:hover {
     opacity: 60%;
+  }
+
+  &:active {
+    opacity: 40%;
+  }
+}
+
+.header__body-burger {
+  display: none;
+
+  @media @mobile {
+    display: block;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+  }
+
+  &--close-on-mobile {
+    @media @mobile {
+      background-image: url("../img/burger-button.webp");
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &--open-on-mobile {
+    @media @mobile {
+      background-image: url("../img/close-button.webp");
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &:active {
